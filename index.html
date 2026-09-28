@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KELAS IIA PJOK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>🏀 KELAS IIA PJOK</h1>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- 1. DASHBOARD SECTION -->
+        <section id="dashboard-section" class="card">
+            <div class="welcome-banner">
+                <h2>Selamat datang murid-murid kelas IIA</h2>
+                <p>Silakan klik tombol di bawah untuk memulai pengerjaan tugas PJOK.</p>
+            </div>
+
+            <div class="action-box">
+                <button id="btn-start-task" class="btn btn-primary btn-large">
+                    📝 Mengerjakan Tugas
+                </button>
+            </div>
+
+            <!-- Tabel Hasil Nilai -->
+            <div class="table-section">
+                <h3>📊 Tabel Hasil Nilai Siswa</h3>
+                <div class="table-responsive">
+                    <table id="table-results">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Murid</th>
+                                <th>Nilai</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <!-- Data akan diisi oleh JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. FORM IDENTITAS SECTION -->
+        <section id="identity-section" class="card hidden">
+            <h2>📋 Form Identitas Murid</h2>
+            <p>Isi nama lengkapmu sebelum mengerjakan soal.</p>
+            
+            <form id="identity-form">
+                <div class="form-group">
+                    <label for="student-name">Nama Murid <span class="required">*</span></label>
+                    <input type="text" id="student-name" placeholder="Masukkan nama lengkap..." required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="student-class">Kelas</label>
+                    <input type="text" id="student-class" value="IIA" readonly class="input-readonly">
+                </div>
+
+                <div class="form-group">
+                    <label for="student-subject">Mata Pelajaran</label>
+                    <input type="text" id="student-subject" value="PJOK" readonly class="input-readonly">
+                </div>
+
+                <div class="form-buttons">
+                    <button type="button" id="btn-back-dash" class="btn btn-secondary">Batal</button>
+                    <button type="submit" class="btn btn-success">Lanjut Mengerjakan Soal ➔</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- 3. QUIZ SECTION -->
+        <section id="quiz-section" class="card hidden">
+            <div class="quiz-header">
+                <div class="student-info-badge">
+                    <span id="quiz-student-name">Nama: -</span> | 
+                    <span>Kelas: IIA</span> | 
+                    <span>Mapel: PJOK</span>
+                </div>
+                <div class="quiz-progress" id="quiz-progress">Soal 1 dari 20</div>
+            </div>
+
+            <form id="quiz-form">
+                <div id="questions-container">
+                    <!-- Soal akan di-generate oleh JavaScript -->
+                </div>
+
+                <div class="quiz-footer">
+                    <button type="button" id="btn-submit-quiz" class="btn btn-primary btn-large">
+                        ✅ Selesai & Kirim Jawaban
+                    </button>
+                </div>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- Script Utama -->
+    <script src="script.js"></script>
+</body>
+</html>
